@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-white;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-amber-800 hover:bg-amber-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center px-4 py-2 border border-amber-800 text-sm font-medium rounded-md text-amber-800 bg-transparent hover:bg-amber-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500;
+  }
+}
+
+/* Custom styles for AOS animations */
+[data-aos] {
+  pointer-events: none;
+}
+[data-aos].aos-animate {
+  pointer-events: auto;
+}
+
+/* Google Translate styling */
+#google_translate_element {
+  display: flex;
+  height: 2em;
+  overflow: hidden !important;
+  border-radius: 5px;
+  justify-content: "center";
+}
+
+#google_translate_element .goog-te-combo {
+  padding: 0.7em;
+  cursor: pointer;
+  border: 1px solid #3ad12c;
+  border-radius: 5px;
+  overflow: hidden;
+  outline: none;
+  width: 10em;
+  overflow: hidden !important;
+}
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 315px) {
+  #google_translate_element .goog-te-combo {
+    padding: 0.5em;
+    width: 4em;
+  }
+}
+
+.skiptranslate select {
+  background-color: transparent !important;
+}
+
+.skiptranslate .VIpgJd-ZVi9od-ORHb-OEVmcd {
+  display: none;
+}
+
+/* Hide spinner during translation */
+.VIpgJd-yAWNEb-hvhgNd {
+  display: none;
+}
+.goog-te-gadget-icon {
+  display: none;
+}
+.goog-te-gadget-simple {
+  display: none;
+}
+
+.VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc {
+  display: none;
+}
